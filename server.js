@@ -1,23 +1,30 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
 // create a variable to require our api routes
 const users = require('./routes/api/users');
 const profile = require('./routes/api/profile');
 const posts = require('./routes/api/posts');
 
-// express app
+// setting express app to a variable
 const app = express();
+
+// Body Parser Middleware (allows us to request from req.body)
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
  
 // DB Config by requiring keys file
 const db = require('./config/keys').mongoURI;
+
 // Connect to MongoDB through Mongoose
 mongoose
    .connect(db)
    .then(() => console.log('MongoDB Connected'))
    .catch(err => console.log(err));
 
- app.get('/', (req, res) => res.send('Hello World'));
+// testing our app.get()   
+app.get('/', (req, res) => res.send('Hello World'));
  
 // use api routes, linking route variables from above
 app.use('/api/users', users);

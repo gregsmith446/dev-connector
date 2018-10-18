@@ -73,4 +73,5 @@ typings/
 .serverless
 
 # Ignore keys.js
-config/keys.js 
+config/keys.js
+/config/keys.js

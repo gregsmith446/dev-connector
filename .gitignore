@@ -1,3 +1,6 @@
+# Ignore keys.js
+config/keys.js
+
 # Logs
 logs
 *.log
@@ -72,6 +75,3 @@ typings/
 # Serverless directories
 .serverless
 
-# Ignore keys.js
-config/keys.js
-/config/keys.js

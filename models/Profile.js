@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
  
-// Create Schema
+// Create Schema (the fields on the profile)
 const ProfileSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
@@ -112,7 +112,7 @@ const ProfileSchema = new Schema({
     }
   },
   date: {
-    type: Date,
+    type: Date, 
     default: Date.now
   }
 });

@@ -1,5 +1,6 @@
 # Ignore keys.js
 config/keys.js
+client/node_modules
 
 # Logs
 logs
